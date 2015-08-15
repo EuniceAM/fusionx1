@@ -46,4 +46,17 @@ function fusionx1_deploy_update_7002() {
   variable_set('admin_theme', 'adminimal');
 }
 
+/**
+ * Enable strongarm, uuid, features_extra, node_export  modules
+ */
+function fusionx1_deploy_update_7003() {
+  // Enable contrib modules.
+  $module_list = array(
+    'strongarm',
+    'uuid',
+    'features_extra',
+    'node_export'
+  );
 
+  module_enable($module_list, $enable_dependencies = TRUE);
+}
