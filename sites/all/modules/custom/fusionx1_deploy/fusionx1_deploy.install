@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Updates for Fusionx1
+ */
+
+/**
+ * Set first update
+ */
+function fusionx1_deploy_update_7000() {
+  cache_clear_all();
+}
+
+

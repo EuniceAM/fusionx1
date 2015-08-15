@@ -1,0 +1,5 @@
+name = Fusionx1 Deploy 
+description = "This automate the activation of the modules, revert/update features", enable and uninstall modules on the fly when executing drush up
+package = "Fusionx1"
+core = 7.x
+
