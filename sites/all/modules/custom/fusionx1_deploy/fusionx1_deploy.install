@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * @file
  * Updates for Fusionx1
@@ -9,6 +11,39 @@
  */
 function fusionx1_deploy_update_7000() {
   cache_clear_all();
+}
+
+
+/**
+ * Enable needed contrib modules
+ */
+function fusionx1_deploy_update_7001() {
+  // Enable contrib modules.
+  $module_list = array(
+    'features',
+    'views',
+    'ctools',
+    'admin_menu',
+    'cors',
+    'devel',
+    'views_json',
+    'views_ui',
+    'rest_server',
+    'module_filter',
+    'libraries',
+    'services'
+  );
+
+  module_enable($module_list, $enable_dependencies = TRUE);
+}
+
+/**
+ * Set admin template
+ */
+function fusionx1_deploy_update_7002() {
+  $theme_list = array('adminimal_theme');
+  theme_enable($theme_list);
+  variable_set('admin_theme', 'adminimal_theme');
 }
 
 
