@@ -55,8 +55,68 @@ function fusionx1_deploy_update_7003() {
     'strongarm',
     'uuid',
     'features_extra',
+    'node_export',
+  );
+
+  module_enable($module_list, $enable_dependencies = TRUE);
+}
+
+/**
+ * Enable strongarm, uuid, features_extra, node_export  modules
+ */
+function fusionx1_deploy_update_7004() {
+  // Enable contrib modules.
+  $module_list = array(
+    'strongarm',
+    'uuid',
+    'features_extra',
     'node_export'
   );
 
   module_enable($module_list, $enable_dependencies = TRUE);
 }
+
+
+/**
+ * Set frontend template
+ */
+function fusionx1_deploy_update_7005() {
+  $theme_list = array('fusionx1');
+  theme_enable($theme_list);
+  variable_set('theme_default', 'fusionx1');
+}
+
+
+/**
+ * Enable panels, jquery_updates,entity, entityreference, entity, nodereference
+ */
+function fusionx1_deploy_update_7006() {
+  // Enable contrib modules.
+  $module_list = array(
+    'panels',
+    'jquery_update',
+    'nodereference',
+    'entity',
+    'field_group',
+    'date'
+  );
+
+  module_enable($module_list, $enable_dependencies = TRUE);
+}
+
+/**
+ * Enable features for content types and services
+ */
+function fusionx1_deploy_update_7007() {
+  // Enable contrib modules.
+  $module_list = array(
+    '_fcontent_types',
+    '_fservices',
+    'context',
+    'context_ui'
+  );
+
+  module_enable($module_list, $enable_dependencies = TRUE);
+}
+
+

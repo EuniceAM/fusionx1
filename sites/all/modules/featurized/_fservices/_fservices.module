@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the _fservices feature.
+ */
+
+include_once '_fservices.features.inc';

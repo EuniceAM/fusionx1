@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the _fcontent_types feature.
+ */
+
+include_once '_fcontent_types.features.inc';
